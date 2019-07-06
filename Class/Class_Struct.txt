@@ -1,0 +1,33 @@
+// 	Definition of class in C++ provided by word class
+// 	It represent an structure which has specification 
+// of access by default - private, it's mean the next:
+// 		class s {...} 
+// 			same as
+// 		struct s {private: ...}
+// 	Usage class is necessary in those case where data
+// must be hiden. 
+// 	An example how to repreasent struct and class as the
+// same entity:
+// 	struct complex
+// 	{
+//			void 	assign(double r, double i);
+//			void	 print() { std::cout << real << "+" << imag << "i"; }
+//		private:
+//			double 	real;
+//			double 	imag;	 
+// 	}
+//
+// 	class complex
+// 	{
+//			double	real;
+//			double	imag;
+//		public:
+//			void	assign(double r, double i);
+//			void 	print() { std::cout << real << "+" << imag << "i"; }	
+// 	} 
+//
+// 	void	complex::assign(double r, double i = 0.0)
+// 	{
+//		real = r;
+//		imag = i;
+// 	}
