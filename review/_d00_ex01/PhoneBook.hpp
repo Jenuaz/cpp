@@ -6,6 +6,8 @@
 class PhoneBook
 {
 	public:
+		int			  filled;
+
 		PhoneBook(void);
 		PhoneBook(std::string name);
 		~PhoneBook(void);
@@ -14,7 +16,7 @@ class PhoneBook
 		ContactRecord	*getPhoneBook(void);
 
 		int				setNewContact(ContactRecord &contact, int index);
-	private:	
+	private:
 		std::string	  _name_of_phonebook;
 		ContactRecord _Phone_book[10];
 };

@@ -35,11 +35,6 @@ ContactRecord::ContactRecord(								\
 
 ContactRecord::~ContactRecord(void)
 {
-	cout 													\
-		<< this->_phone_number								\
-		<< " was deleted from phonebook"					\
-		<<													\
-	endl;
 	return ;
 }
 
@@ -57,8 +52,10 @@ void	ContactRecord::getRecordDetails(void)
 	cout													\
 		<< "First name: "									\
 		<<	this->_first_name								\
+		<<  endl											\
 		<< "Last name: "									\
 		<< 	this->_last_name								\
+		<<	endl											\
 		<<	"Phone number: "								\
 		<<	this->_phone_number								\
 		<<													\
@@ -88,13 +85,14 @@ void	ContactRecord::getRecordName(						\
 						  std::string phone_number			\
 									)						\
 {
-	cout													\
-		<< "Contact Name: "									\
-		<< this->_first_name								\
-		<< " " 												\
-		<< this->_last_name									\
-		<<													\
-	endl;
+	if (this->_phone_number.compare(phone_number))
+		cout												\
+			<< "Contact Name: "								\
+			<< this->_first_name							\
+			<< " " 											\
+			<< this->_last_name								\
+			<<												\
+		endl;
 }
 
 //
@@ -148,13 +146,6 @@ int		ContactRecord::setRecordName(						\
 	{
 		this->_first_name = first_name;
 		this->_last_name = last_name;
-		cout												\
-			<< "Fisrt Name: "								\
-			<< this->_first_name							\
-			<< "Last Name: "								\
-			<< this->_last_name								\
-			<<												\
-		endl;
 		return (1);
 	}
 	cout													\
